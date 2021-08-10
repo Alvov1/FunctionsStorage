@@ -3,18 +3,6 @@
 #include <functional>
 #include <map>
 
-
-// базовый класс фигуры (полиморфный)
-struct Shape{};
-// прямоугольник
-struct Rectangle : Shape {};
-// треугольник
-struct Triangle : Shape {};
-// функция для проверки пересечения двух прямоугольников
-bool is_intersect_r_r(Shape * a, Shape * b);
-// функция для проверки пересечения прямоугольника и треугольника
-bool is_intersect_r_t(Shape * a, Shape * b);
-
 // Base - базовый класс иерархии
 // Result - тип возвращаемого значения мультиметода
 // Commutative - флаг, который показывает, что
@@ -66,6 +54,20 @@ struct Multimethod2
 private:
     std::map<pairTypes, func> table;
 };
+
+
+
+
+// базовый класс фигуры (полиморфный)
+struct Shape{};
+// прямоугольник
+struct Rectangle : Shape {};
+// треугольник
+struct Triangle : Shape {};
+// функция для проверки пересечения двух прямоугольников
+bool is_intersect_r_r(Shape * a, Shape * b);
+// функция для проверки пересечения прямоугольника и треугольника
+bool is_intersect_r_t(Shape * a, Shape * b);
 
 int main()
 {
